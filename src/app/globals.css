@@ -3,25 +3,59 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 40, 40, 40;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-rgb: 0, 0, 0;
+    }
+} */
+
+html {
+    height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background-color: rgb(var(--background-rgb));
+    background-color: hsla(254, 49%, 11%, 1);
+    background-image: radial-gradient(
+            at 87% 35%,
+            hsla(227, 50%, 16%, 1) 0px,
+            transparent 50%
+        ),
+        radial-gradient(at 14% 45%, hsla(250, 34%, 19%, 1) 0px, transparent 50%),
+        radial-gradient(at 42% 91%, hsla(180, 20%, 29%, 1) 0px, transparent 50%),
+        radial-gradient(at 96% 70%, hsla(187, 54%, 26%, 1) 0px, transparent 50%);
+    /* background-position: fixed; */
+    /* background-image: url("/bg.jpg"); */
+    /* background-position-x: center; */
+}
+
+#bg {
+    animation: zoom 20s alternate infinite;
+    z-index: -999;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.panel {
+    padding: 16px;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.panel:hover {
+    background-color: rgba(0, 0, 0, 0.4);
 }
