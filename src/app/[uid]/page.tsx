@@ -7,7 +7,7 @@ import CharacterSelection from "./CharacterSelection";
 import { User } from "@/types/User";
 
 export default function Page({ params }: { params: { uid: number } }) {
-    const [data, setData] = useState<User>({});
+    const [data, setData] = useState<User>({} as User);
     const [selectedCharacter, setSelectedCharacter] = useState(0);
 
     useEffect(() => {
