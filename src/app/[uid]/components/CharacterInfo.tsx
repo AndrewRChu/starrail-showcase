@@ -8,8 +8,8 @@ export default function CharacterInfo({ character }: { character: Character }) {
                 <div>
                     <span className="text-3xl">{character.name}</span>
                     <div>
-                        <span>Lv.</span>
-                        <span className="text-2xl"> {character.level} </span>
+                        <span>Lv. </span>
+                        <span className="text-2xl">{character.level} </span>
                         <span className="text-[rgba(255,255,255,0.5)]">
                             / {character.promotion * 10 + 20}
                             <span></span>

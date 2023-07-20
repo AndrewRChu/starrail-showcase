@@ -29,7 +29,7 @@ export default function RelicInfo({ relic }: { relic: Relic }) {
             </div>
             <div className="flex flex-col">
                 {relic.sub_affix.map((substat, i) => (
-                    <div className="flex flex-row" key={i}>
+                    <div className="flex flex-row justify-between" key={i}>
                         <img src={getImage(substat.icon)} className="w-8 h-8" />
                         {substat.display}
                     </div>
