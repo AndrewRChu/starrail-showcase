@@ -18,11 +18,14 @@ export default function CharacterInfo({ character }: { character: Character }) {
                 </div>
                 <div className="h-16 flex flex-row gap-2">
                     <img
-                        src={getImage(character.path.icon)}
+                        src={character.path && getImage(character.path.icon)}
                         className="h-full"
                     />
                     <img
-                        src={getImage(character.element.icon)}
+                        src={
+                            character.element &&
+                            getImage(character.element.icon)
+                        }
                         className="h-full"
                     />
                 </div>
