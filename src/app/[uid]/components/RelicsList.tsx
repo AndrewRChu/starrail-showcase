@@ -11,8 +11,8 @@ export default function RelicsList({
 }) {
     return (
         <div className="h-full flex flex-row flex-wrap w-[400px] justify-between items-center">
-            {relics.map((relic) => (
-                <RelicInfo relic={relic} />
+            {relics.map((relic, i) => (
+                <RelicInfo relic={relic} key={i} />
             ))}
         </div>
     );
