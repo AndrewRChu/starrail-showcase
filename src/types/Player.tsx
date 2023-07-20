@@ -7,8 +7,8 @@ export interface Player {
     level: number;
     world_level: number;
     friend_count: number;
-    avatar: Avatar;
+    avatar?: Avatar;
     signature: string;
     is_display: boolean;
-    space_info: SpaceInfo;
+    space_info?: SpaceInfo;
 }

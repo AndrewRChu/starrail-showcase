@@ -5,7 +5,7 @@ export interface Skill {
     name: string;
     level: number;
     max_level: number;
-    element: Element;
+    element?: Element;
     type: string;
     type_text: string;
     effect: string;

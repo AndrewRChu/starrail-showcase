@@ -1,5 +1,5 @@
 import { Path } from "./Path";
-import { Stat } from "./Stat";
+import { Attribute } from "./Attribute";
 import { Property } from "./Property";
 
 export interface LightCone {
@@ -13,6 +13,6 @@ export interface LightCone {
     preview: string;
     portrait: string;
     path: Path;
-    attributes: Stat[];
+    attributes: Attribute[];
     properties: Property[];
 }

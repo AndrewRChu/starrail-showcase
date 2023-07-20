@@ -5,7 +5,7 @@ import { Trace } from "./Trace";
 import { LightCone } from "./LightCone";
 import { Relic } from "./Relic";
 import { RelicSet } from "./RelicSet";
-import { Stat } from "./Stat";
+import { Attribute } from "./Attribute";
 import { Property } from "./Property";
 
 export interface Character {
@@ -19,14 +19,14 @@ export interface Character {
     preview: string;
     portrait: string;
     rank_icons: string[];
-    path: Path;
-    element: Element;
+    path?: Path;
+    element?: Element;
     skills: Skill[];
     skill_trees: Trace[];
-    light_cone: LightCone;
+    light_cone?: LightCone;
     relics: Relic[];
     relic_sets: RelicSet[];
-    attributes: Stat[];
-    additions: Stat[];
+    attributes: Attribute[];
+    additions: Attribute[];
     properties: Property[];
 }

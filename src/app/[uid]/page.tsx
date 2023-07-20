@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { UserContext } from "./UserContext";
-import Showcase from "./Showcase";
-import CharacterSelection from "./CharacterSelection";
+import Showcase from "./components/Showcase";
+import CharacterSelection from "./components/CharacterSelection";
 import { User } from "@/types/User";
 
 export default function Page({ params }: { params: { uid: number } }) {

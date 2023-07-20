@@ -1,6 +1,6 @@
 import { Character } from "@/types/Character";
-import getImage from "./data";
-import { Stat } from "@/types/Stat";
+import getImage from "../data";
+import { Attribute } from "@/types/Attribute";
 
 export function StatTable({ character }: { character: Character }) {
     return (
@@ -16,7 +16,11 @@ export function StatTable({ character }: { character: Character }) {
             <StatRow type="sp_rate" add100 />
             <StatRow type="effect_hit" />
             <StatRow type="effect_res" />
-            <StatRow type={`${character.element.id.toLowerCase()}_dmg`} />
+            <StatRow
+                type={`${
+                    character.element && character.element.id.toLowerCase()
+                }_dmg`}
+            />
             <StatRow type="all_dmg" />
         </div>
     );

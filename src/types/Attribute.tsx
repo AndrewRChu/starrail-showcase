@@ -1,4 +1,4 @@
-export interface Stat {
+export interface Attribute {
     field: string;
     name: string;
     icon: string;

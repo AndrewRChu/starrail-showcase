@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { UserContext } from "./UserContext";
-import getImage from "./data";
+import { UserContext } from "../UserContext";
+import getImage from "../data";
 import { Character } from "@/types/Character";
 
 export default function CharacterSelection({

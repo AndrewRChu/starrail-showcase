@@ -1,5 +1,5 @@
 import { Property } from "./Property";
-import { SubProperty } from "./SubProperty";
+import { SubAffix } from "./SubAffix";
 
 export interface Relic {
     id: string;
@@ -9,6 +9,6 @@ export interface Relic {
     rarity: number;
     level: number;
     icon: string;
-    main_affix: Property;
-    sub_affix: SubProperty[];
+    main_affix?: Property;
+    sub_affix: SubAffix[];
 }
