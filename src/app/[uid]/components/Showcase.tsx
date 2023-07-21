@@ -13,18 +13,18 @@ export default function Showcase({
     character: Character;
 }) {
     return (
-        <div className="flex flex-row items-center gap-4 h-[500px]">
-            <div className="w-[350px] flex flex-col gap-2 h-full panel">
+        <div className="flex flex-row items-center gap-6 h-[500px] panel">
+            <div className="w-[350px] flex flex-col gap-2 h-full">
                 <CharacterInfo character={character} />
                 <StatTable character={character} />
             </div>
-            <div className="flex flex-col h-full panel w-[300px] gap-2">
+            <div className="flex flex-col h-full w-[250px] gap-2">
                 <img
                     src={
                         character.light_cone &&
                         getImage(character.light_cone?.portrait)
                     }
-                    className="w-[220px] self-center"
+                    className="w-[250px] self-center"
                 />
                 <div>
                     <span>
@@ -44,7 +44,7 @@ export default function Showcase({
                     </div>
                 </div>
             </div>
-            <div className="panel h-full">
+            <div className="h-full">
                 <RelicsList
                     relics={character.relics}
                     sets={character.relic_sets}

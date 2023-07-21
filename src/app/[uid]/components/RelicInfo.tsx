@@ -3,7 +3,7 @@ import getImage from "../data";
 
 export default function RelicInfo({ relic }: { relic: Relic }) {
     return (
-        <div className="flex flex-row gap-4 p-2 w-[200px]">
+        <div className="flex flex-row gap-4 w-[200px]">
             <div className="flex flex-col justify-center items-center">
                 <span
                     className={`text-sm ${
